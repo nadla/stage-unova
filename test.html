@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Page test</title>
+</head>
+<body>
+    <h1 class="centre">Bienvenue sur cette page test</h1>
+    <p>Page test pour un site web. <span class="block"><strong>Stage d'observation</strong> a <em>Unova</em>.</span>
+    </p>
+    <div class="gauche">
+        <ul>
+            <li class="barre">Jour 1 :</li>
+            <li class="souligne">Cours sur l'html et mise en pratique, debut du CSS</li>
+            <li class="barre">Jour 2 :</li>
+            <li class="souligne">Cours sur l'html et CSS, pratique sur le CSS</li>
+            <li class="barre">Jour 3 :</li>
+            <li class="souligne">Pratique sur l'html et CSS</li>
+            <li class="barre">Jour 4 :</li>
+            <li class="souligne">Cours sur Javascript</li>
+            <li class="barre">Jour 5</li>
+        </ul>
+        <ol>
+            <li>Apprentissage des cours</li>
+            <li>Mise en pratique des cours.</li>
+            <li>Fin.</li>
+        </ol>
+        <p>Cours par <a id='1' href="https://openclassrooms.com">OpenClassrooms</a></p>
+    </div>
+    <div id="scrollUp">
+        <a href="#top"><img src="images/to_top.png" alt="to top" /></a>
+    </div>
+    <div class="gauche">
+        <h2>Test ancres</h2> Aller directement à la partie traitant de : <div class="dessous">
+        <a href="#test 1">un test</a>
+        <div class="dessous">
+            <a href="#divers">divers</a>
+        </div>
+        <div>
+            <h2 id="test 1">un test</h2>
+        </div>
+        <div>
+            <p>1...........................................................</p>
+        </div>
+        <div class="gauche">
+            <h2 id="divers">Divers</h2>
+            <div class="img-zoom-container">
+                <img id="myimage" src="images/cloud.jpg" width="300" height="240" alt="cloud">
+                <div id="myresult" class="img-zoom-result"></div>
+            </div>
+            <p> Rendez-vous sur une autre page <a href="contents/page 1.html">à lire</a>
+            </p>
+            <p>Cliquez sur ce lien : <a href="contents/nouvelle%20page.html" target="_blank" title="Allez y, cliquez"> (nouvel onglet) </a> </p>
+            <p><a href="mailto:votrenom@test.com">e-mail test</a></p>
+            <p><a href="downloads/monfichier.zip">Télécharger le fichier : monfichier.zip</a></p>
+            <p class="block">Une fleur (cliquez sur l'image pour l'agrandir) :</p>
+            <a href="images/rose-rose.jpg" target="blank"><img src="images/resizeimage.jpg" id="img-fleur" class="imageflottante" alt="Photo de fleur" title="Une fleur" /></a>
+        </div>
+    </div>
+        <div class="gauche">
+            <form method="post" action="php/traitement.php">
+                <p>
+                    <label for="test 1">Message</label> : <input type="text" name="message" id="message" />
+                </p>
+            </form>
+        </div>
+    </div>
+    <script>
+        alert('Bienvenue');
+        let img = document.getElementById('img-fleur');
+        img.addEventListener('click', function (event) {
+            if (!confirm("Voulez vous agrandir l'image ? (L'image seras ouverte dans un nouvel onglet)")) event.preventDefault();
+        });
+    </script>
+</body>
+</html>
